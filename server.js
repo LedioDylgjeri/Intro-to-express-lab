@@ -15,30 +15,15 @@ app.set('view engine', 'ejs')
 
 // mount routes
 
-// app.get('/', function(req, res) {
-//   res.redirect('/students')
-// })
+app.get('/', function(req, res) {
+  res.redirect('/students')
+})
 
-// app.get('/students', function(req, res) {
-//   res.render('students')
-// })
 
 app.get('/students', function(req, res) {
   res.render('students/index', {
     students: students
   })
-})
-
-app.get('/', function(req, res){
-  res.send('<h1>hello</h1>')
-})
-
-app.get('/waffles', function(req, res){
-  res.redirect('/home')
-})
-
-app.get('/pandas', function(req, res){
-  res.send('<h2>Pandas are dope</h2>')
 })
 
 app.get('/home', function(req, res){
